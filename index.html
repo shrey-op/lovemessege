@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">   
+<title>Love Letter</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec; /* Light pink background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .letter {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            text-align: left;
+            opacity: 1; /* ensure content is visible */
+            position: relative; /* enable absolute positioning for pseudo elements */
+        }
+
+        h1 {
+            color: #e91e63;
+            font-size: 2.5em;
+            margin-bottom: 15px; /* space below the heading */
+            text-align: center;
+            border-bottom: 2px solid #e91e63;
+            padding-bottom: 5px;
+            font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+        }
+
+        .signature {
+            font-style: italic;
+            text-align: right;
+            margin-top: 20px;
+            font-family: 'Times New Roman', serif; /* change font for signature */
+        }
+
+        /* Hearts Background */
+        .hearts-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* to avoid interference with letter content */
+        }
+
+        .heart {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #e91e63;
+            border-radius: 50%;
+            transform: rotate(45deg);
+            animation: hearts 10s infinite linear;
+            pointer-events: none; /* to avoid interference with letter content */
+        }
+
+        @keyframes hearts {
+            0% {
+                transform: translate(0, 0) rotate(45deg);
+            }
+            100% {
+                transform: translate(-120vw, 120vh) rotate(45deg);
+            }
+        }
+
+        /* Heart positions */
+        .heart:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            width: 15px;
+            height: 15px;
+            animation-duration: 6s;
+        }
+        .heart:nth-child(2) {
+            top: 40%;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            animation-duration: 8s;
+        }
+        .heart:nth-child(3) {
+            top: 80%;
+            left: 80%;
+            width: 12px;
+            height: 12px;
+            animation-duration: 7s;
+        }
+        .heart:nth-child(4) {
+            top: 60%;
+            left: 20%;
+            width: 8px;
+            height: 8px;
+            animation-duration: 9s;
+        }
+        .heart:nth-child(5) {
+            top: 90%;
+            left: 40%;
+            width: 11px;
+            height: 11px;
+            animation-duration: 10s;
+        }
+        /* Additional hearts */
+        .heart:nth-child(6) {
+            top: 30%;
+            left: 30%;
+            width: 14px;
+            height: 14px;
+            animation-duration: 7s;
+        }
+        .heart:nth-child(7) {
+            top: 70%;
+            left: 70%;
+            width: 12px;
+            height: 12px;
+            animation-duration: 9s;
+        }
+        .heart:nth-child(8) {
+            top: 50%;
+            left: 40%;
+            width: 10px;
+            height: 10px;
+            animation-duration: 8s;
+        }
+        .heart:nth-child(9) {
+            top: 20%;
+            left: 60%;
+            width: 13px;
+            height: 13px;
+            animation-duration: 10s;
+        }
+        .heart:nth-child(10) {
+            top: 90%;
+            left: 20%;
+            width: 11px;
+            height: 11px;
+            animation-duration: 6s;
+        }
+        /* Customize fonts */
+        .letter {
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            font-family: 'Georgia', serif;
+            color: #e91e63;
+        }
+
+        .signature {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            text-align: right;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="letter">
+        <div class="hearts-background">
+            <!-- Adjusted heart positions -->
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <!-- Additional hearts -->
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+        <h1>To My Love</h1>
+        <p>
+            Your letter means the world to me. I can't express how grateful I am to have you in my life. 
+        </p>
+        <p>
+            Your love and support mean everything to me. I appreciate your kindness, understanding, and unwavering presence. You make me a better person, and I'm so thankful to you.
+        </p>
+        <p>
+            Thank you for saying yes when I proposed you. After we finish our studies, I can't wait to marry you and build a life together. I want us to create a home filled with Love. Will you promise me that you will marry me.
+        </p>
+        <p>
+            I love you more than words can express. You're my everything, and I look forward to a future filled with Love and happieness with you.
+        </p>
+        <div class="signature">
+            <p>Forever yours,</p>
+            <p>Your Lover</p>
+        </div>
+    </div>
+</body>
+</html>
